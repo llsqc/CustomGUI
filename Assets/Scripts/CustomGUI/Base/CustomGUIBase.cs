@@ -16,10 +16,10 @@ public class CustomGUIBase : MonoBehaviour
     public GUIContent content;
 
     public GUIStyle style;
-    
+
     public E_Style_OnOff styleOnOrOff = E_Style_OnOff.Off;
 
-    private void OnGUI()
+    public void DrawGUI()
     {
         switch (styleOnOrOff)
         {
@@ -33,12 +33,12 @@ public class CustomGUIBase : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
     }
-    
+
     protected virtual void StyleOnDraw()
     {
         //GUI.Button(guiPos.Pos, content, style);
     }
-    
+
     protected virtual void StyleOffDraw()
     {
         //GUI.Button(guiPos.Pos, content);
