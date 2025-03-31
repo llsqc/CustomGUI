@@ -9,7 +9,7 @@ public enum E_Style_OnOff
     Off
 }
 
-public class CustomGUIBase : MonoBehaviour
+public abstract class CustomGUIBase : MonoBehaviour
 {
     public CustomGUIPos guiPos;
 
@@ -34,13 +34,6 @@ public class CustomGUIBase : MonoBehaviour
         }
     }
 
-    protected virtual void StyleOnDraw()
-    {
-        //GUI.Button(guiPos.Pos, content, style);
-    }
-
-    protected virtual void StyleOffDraw()
-    {
-        //GUI.Button(guiPos.Pos, content);
-    }
+    protected abstract void StyleOnDraw();
+    protected abstract void StyleOffDraw();
 }
