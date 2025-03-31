@@ -16,13 +16,14 @@ public enum E_Alignment_Type
     BottomRight
 }
 
+[System.Serializable]
 public class CustomGUIPos
 {
     private Rect rPos = new Rect(0, 0, 100, 100);
 
-    public E_Alignment_Type ScreenAlignmentType;
+    public E_Alignment_Type ScreenAlignmentType = E_Alignment_Type.Center;
 
-    public E_Alignment_Type WidgetAlignmentType;
+    public E_Alignment_Type WidgetAlignmentType = E_Alignment_Type.Center;
 
     public Vector2 pos;
 
